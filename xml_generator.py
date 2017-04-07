@@ -84,12 +84,16 @@ def save_file(filename, directory='./', display=False):
 
 
 def _test():
+    """Testing for xml generator."""
     generate_xml(
         img_info={'name': '01-00001.jpg', 'size': {'w': 640, 'h': 480}},
-        item_info={'name': 'test', 'bndbox': {
-            'x': {'min': 88, 'max': 621},
-            'y': {'min': 23, 'max': 991}
-        }}
+        item_info={
+            'name': 'test',
+            'bndbox': {
+                'x': {'min': 88, 'max': 621},
+                'y': {'min': 23, 'max': 991}
+            }
+        }
     )
     save_file(filename='test01-00001.xml', directory='./test01', display=True)
 
